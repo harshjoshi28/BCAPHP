@@ -1,5 +1,4 @@
 <?php
-//ob_start();
 $con = mysqli_connect("localhost","root","","test");
 
 	if(isset($_FILES['photo']))
@@ -14,12 +13,11 @@ $con = mysqli_connect("localhost","root","","test");
    
    $img_nm= $_FILES['photo']['name'];
    
-$ins = "insert into faculty(name,qualification,designation,research,photo) values ('".$_POST['name']."','".$_POST['qualification']."','".$_POST['designation']."','".$_POST['research']."','".$img_nm."')";
+$ins = "insert into faculty(photo) values ('".$img_nm."')";
 $a = mysqli_query($con,$ins);
 if($a)
 {
 	header("location:form.php");
-	echo "record inserted.";
 }
 else
 {
