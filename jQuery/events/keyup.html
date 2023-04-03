@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function()
+{
+  $("input").keydown(function(){
+    $("input").css("background-color", "yellow");
+  });
+
+  $("input").keyup(function(){
+    $("input").css("background-color", "pink");
+  });
+  
+});
+</script>
+</head>
+<body>
+Enter your name: <input type="text" name="txtnm" value="">
+</body>
+</html>
